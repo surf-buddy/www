@@ -1,0 +1,59 @@
+$primary: #5555aa;
+$danger: #ff4136;
+$bsopacity: 0.1;
+// $light: rgba(255,255,255,0.1);
+
+// .screen {
+//    position: absolute;
+//    object-position: 30;
+//    height: 110%;
+//    width: 320px;
+//    // height: 700px;
+//    // width: 330px; //define a constraints if necessary 
+//    // height: 700px;  //define a constraints if necessary 
+// }
+// 
+// .screen img {
+//     position: relative;
+//     width: 100%;  // 93.5%;
+//     height: 120%;
+//     // object-fit: contain;
+//     object-position: 0px -20px; 
+// }
+
+.phone {
+   position: relative;
+   background: url('../images/phone-background-solid.png') no-repeat center center / 100% 100%;
+   width: 280px; //define a constraints if necessary 
+   height: 600px;  //define a constraints if necessary 
+}
+
+.phone img {
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    // position: relative;
+    // width: 100%;  // 93.5%;
+    // height: 100%;
+    // object-fit: contain;
+    // object-position: 10px 40px; 
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@import "main";

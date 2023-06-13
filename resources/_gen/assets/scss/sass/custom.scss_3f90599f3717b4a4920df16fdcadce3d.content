@@ -1,0 +1,23 @@
+.pagebg-container {
+  background: url(../img/background-transparent.png) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -9999; }
+
+.bg-feather {
+  background-color: rgba(255, 255, 255, 0.4);
+  /* opacity: 1; */ }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 280px;
+  /*70%;*/ }
+
+/*# sourceMappingURL=custom.css.map */

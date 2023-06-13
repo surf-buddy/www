@@ -1,0 +1,19 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'SurfBuddy'
+theme = "surfbuddy-theme"
+[menu]
+  [[menu.main]]
+    URL = "/"
+    name = "Home"
+    identifier = "home"
+    pre = "home"
+    weight = 1
+  [[menu.main]]
+    URL = "/usage/"
+    name = "Usage"
+    identifier = "usage"
+    pre = "file"
+    weight = 2
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
