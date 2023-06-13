@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="background-image" style="background: url(../images/{{ .Params.background }}) no-repeat center top;">
+          <!-- no content -->
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+            {{- partial "header.html" . -}}
+            </div>
+            <div class="row" id="content">
+            <div class="container">
+            {{- block "main" . }}{{- end }}
+            </div>
+            </div>
+            <div class="row">
+            {{- partial "footer.html" . -}}
+            </div>
+            {{- partial "script.html" . -}}
+        </div>
+    </body>
+</html>

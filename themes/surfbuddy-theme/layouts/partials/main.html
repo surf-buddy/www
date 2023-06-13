@@ -1,0 +1,9 @@
+<div class="container overflow-hidden">
+  {{ range .Params.Content.pages }}
+    {{ if (not (isset . "type")) }}
+      {{- partial "default-page.html" . -}}
+    {{ else }}
+      {{- partial .type . -}}
+    {{ end }}
+  {{ end }}
+</div>

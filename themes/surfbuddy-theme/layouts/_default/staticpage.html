@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  {{- partial "head.html" . -}}
+<body>
+<div class="background-image" style="background: url(../images/{{ .Params.background }}) no-repeat center top;">
+<!-- no content -->
+</div>
+
+{{- partial "header.html" . -}}
+
+<div class="container-fluid">
+  <div class="row">
+    {{- partial "sidebar.html" . -}}
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      {{- partial "main.html" . -}}
+    </main>
+  </div>
+</div>
+{{- partial "script.html" . -}}
+</body>
+</html>
