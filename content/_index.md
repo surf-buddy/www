@@ -34,7 +34,7 @@ background = 'wave-1920x1080.jpg'
     id = 'install-surfbuddy'
     image = 'surfbuddy-install.gif'
     image_class = 'phone'
-    image_bg = 'phone-background.png'
+    image_bg = 'phone-background-solid.png'
     image-right = true
     link_info = 'Learn more about the usage of the watchface'
     [[content.pages.buttons]]
@@ -59,6 +59,7 @@ background = 'wave-1920x1080.jpg'
     id = 'set-surf-spot'
     image = 'surfbuddy-set-spot.gif'
     image_class = 'phone'
+    image_bg = 'phone-background-solid.png'
     image-right = true
     link_info = '...'
     [[content.pages.items]]

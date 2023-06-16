@@ -1,7 +1,12 @@
+{{/*
+{{ printf "%#v" ((resources.Get "images/phone-background.png").RelPermalink) }}
+*/}}
 <div class="row mt-5">
   {{ if (not (isset . "image-right")) }}
     <div class="col d-flex justify-content-center">
-      <img src="/images/{{ .image }}">
+      {{ $some_img := printf "%s/%s" "images" .image }}
+      {{ $myimage := resources.Get $some_img }}
+      <img src="{{ $myimage.RelPermalink }}">
     </div>
   {{ end }}
   <div class="col">
@@ -26,9 +31,24 @@
   </div>
   {{ if (isset . "image-right") }}
   <div class="col d-flex justify-content-center">
-    <!-- <div class="{{ .image_class }}" style="background: url('../images/{{ .image_bg }}') no-repeat center center / 100% 100%;"> -->
-    <div class="{{ .image_class }}">
-      <img src="/images/{{ .image }}">
+    {{ if (isset . "image_bg") }}
+      {{ $some_img := printf "%s/%s" "images" .image_bg }}
+      {{ $myimage := resources.Get $some_img }}
+      <div class="{{ .image_class }}" style="url('{{ $myimage.RelPermalink }}') no-repeat center center / 100% 100%;">
+    {{ else }}
+      <div class="{{ .image_class }}">
+    {{ end }}
+      {{ $some_img := printf "%s/%s" "images" .image }}
+      {{ $myimage := resources.Get $some_img }}
+      {{/*
+      {{ $myimage := .Resources.GetMatch $some_img }}
+      */}}
+      <img src="{{ $myimage.RelPermalink }}">
+      {{/*
+      {{ with $myimage }}
+        <img src="{{ .RelPermalink }}">
+      {{ end }}
+      */}}
     </div>
   </div>
   {{ end }}
