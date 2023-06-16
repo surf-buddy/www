@@ -20,7 +20,7 @@ background = 'wave-1920x1080.jpg'
   [[content.pages]]
     headline = 'How does it work?'
     id = 'how-does-it-work'
-    image = 'surfbuddy-arch.png'
+    image = 'surfbuddy-arch-narrow.png'
     link_info = 'If you want to learn more about the functionality of the service'
     [[content.pages.paragraphs]]
       content = 'The watchface gets the forecast information from the SurfBuddy API that caches and transforms forecast responses from external services. At the moment this is mostly Surfline in combination with a GeoCity location service.'
