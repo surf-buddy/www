@@ -2,7 +2,9 @@
 <html lang="en">
   {{- partial "head.html" . -}}
 <body>
-<div class="background-image" style="background: url(../images/{{ .Params.background }}) no-repeat center top;">
+{{ $some_img := printf "%s/%s" "images" .Params.background }}
+{{ $myimage := resources.Get $some_img }}
+<div class="background-image" style="background: url('{{ $myimage.RelPermalink }}') no-repeat center top;">
 <!-- no content -->
 </div>
 

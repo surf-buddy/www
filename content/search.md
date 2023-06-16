@@ -3,6 +3,8 @@ title: "Search Results"
 sitemap:
   priority : 0.1
 layout: "search"
+
+background: "wave-1920x1080.jpg"
 ---
 
 
