@@ -1,31 +1,36 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+<nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
   <div class="position-sticky pt-3">
-    <ul class="nav flex-column">
+    <ul id="sidebarMenu" class="nav nav-pills flex-column ps-3">
       {{ $pages := .Params.Content.pages }}
+      {{ $menu_len := .Site.Menus.main | len }}
       {{ range .Site.Menus.main }}
         {{ $url := .URL }}
         <li class="nav-item">
           {{ if eq $.Params.Title .Name }}
-          <button class="nav-link btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#{{ .Identifier }}-collapse" aria-expanded="false">
-            {{ if .Pre }}
-            <span data-feather="{{ .Pre }}"></span>
-            {{ end }}
-            {{ .Name }}
-          </button>
-          <div class="collapse show" id="{{ .Identifier }}-collapse" style="">
-            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              {{ range $pages }}
-                <li><a href="#{{ .id }}" class="nav-link link-dark rounded">{{ .headline }}</a></li>
-              {{ end }}
-            </ul>
-          </div>
+            {{/* if (gt $menu_len 1) */}}
+              <a href="#main-body">
+              <button class="nav-link btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#{{ .Identifier }}-collapse" aria-expanded="false">
+                {{ if .Pre }}
+                <span data-feather="{{ .Pre }}"></span>
+                {{ end }}
+                <b>{{ .Name }}</b>
+              </button>
+              </a>
+            {{/* end */}}
+            <div class="ps-2 collapse show" id="{{ .Identifier }}-collapse" style="">
+              <ul id="sidebarSubMenu" class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                {{ range $pages }}
+                  <li><a href="#{{ .id }}" class="nav-link link-dark rounded">{{ .headline }}</a></li>
+                {{ end }}
+              </ul>
+            </div>
           {{ else }}
-          <a class="nav-link" aria-current="page" href="{{ $url }}">
-            {{ if .Pre }}
-            <span data-feather="{{ .Pre }}"></span>
-            {{ end }}
-            {{ .Name }}
-          </a>
+            <a class="nav-link" aria-current="page" href="{{ $url }}">
+              {{ if .Pre }}
+              <span data-feather="{{ .Pre }}"></span>
+              {{ end }}
+              {{ .Name }}
+            </a>
           {{ end }}
         </li>
       {{ end }}

@@ -1,55 +1,95 @@
 {{/*
 {{ printf "%#v" ((resources.Get "images/phone-background.png").RelPermalink) }}
 */}}
-<div class="row mt-5">
-  {{ if (not (isset . "image-right")) }}
-    <div class="col d-flex justify-content-center">
-      {{ $some_img := printf "%s/%s" "images" .image }}
-      {{ $myimage := resources.Get $some_img }}
-      <img src="{{ $myimage.RelPermalink }}">
-    </div>
-  {{ end }}
-  <div class="col">
-    <div id="home-jumbotron" class="ps-5 pe-5 pt-5 pb-5 jumbotron text-center bg-light bg-opacity-25">
-      <h1 id="{{ .id }}" class="display-4">{{ .headline }}</h1>
-      {{ range .paragraphs }}
-      <p class="lead">{{ .content }}</p>
+<div id="{{ .id }}" class="row mt-5">
+  {{ if (not (isset . "image"))}}
+    <div class="col">
+      {{ if .centered }}
+        <div id="home-jumbotron" class="ps-5 pe-5 pt-5 pb-5 jumbotron text-center bg-light bg-opacity-25">
+      {{ else }}
+        <div id="home-jumbotron" class="ps-5 pe-5 pt-5 pb-5 jumbotron bg-light bg-opacity-25">
       {{ end }}
-      {{ if (isset . "items") }}
-        <ol class="text-start list-group list-group-numbered">
-        {{ range .items }}
-          <li class="list-group-item">{{ .content }}</li>
+        <h1 class="display-4">{{ .headline }}</h1>
+        {{ range .paragraphs }}
+          <p class="lead">{{ .content }}</p>
         {{ end }}
-        </ol>
-      {{ end }}
-      <hr class="my-4">
-      <p>{{ .link_info }}</p>
-      {{ range .buttons }}
-      <a class="btn btn-primary btn-lg" href="{{ .href }}" role="button">{{ .label }}</a>
-      {{ end }}
+        <div class="lead">
+          {{/* .page_content | $.Page.RenderString */}}
+          {{ .page_content | markdownify }}
+        </div>
+        {{ if (isset . "items") }}
+          <ol class="text-start list-group list-group-numbered">
+          {{ range .items }}
+            <li class="list-group-item">{{ .content }}</li>
+          {{ end }}
+          </ol>
+        {{ end }}
+        <hr class="my-4">
+        <p>{{ .link_info }}</p>
+        {{ range .buttons }}
+        <a class="btn btn-primary btn-lg" href="{{ .href }}" role="button">{{ .label }}</a>
+        {{ end }}
+      </div>
     </div>
-  </div>
-  {{ if (isset . "image-right") }}
-  <div class="col d-flex justify-content-center">
-    {{ if (isset . "image_bg") }}
-      {{ $some_img := printf "%s/%s" "images" .image_bg }}
-      {{ $myimage := resources.Get $some_img }}
-      <div class="{{ .image_class }}" style="background: url('{{ $myimage.RelPermalink }}') no-repeat center center / 100% 100%;">
-    {{ else }}
-      <div class="{{ .image_class }}">
+
+  {{ else }}
+    {{ if (not (isset . "image-right")) }}
+      <div class="col d-flex justify-content-center">
+        {{ $some_img := printf "%s/%s" "images" .image }}
+        {{ $myimage := resources.Get $some_img }}
+        <img src="{{ $myimage.RelPermalink }}">
+      </div>
     {{ end }}
-      {{ $some_img := printf "%s/%s" "images" .image }}
-      {{ $myimage := resources.Get $some_img }}
-      {{/*
-      {{ $myimage := .Resources.GetMatch $some_img }}
-      */}}
-      <img src="{{ $myimage.RelPermalink }}">
-      {{/*
-      {{ with $myimage }}
-        <img src="{{ .RelPermalink }}">
+    <div class="col">
+      {{ if .centered }}
+        <div id="home-jumbotron" class="ps-5 pe-5 pt-5 pb-5 jumbotron text-center bg-light bg-opacity-25">
+      {{ else }}
+        <div id="home-jumbotron" class="ps-5 pe-5 pt-5 pb-5 jumbotron bg-light bg-opacity-25">
       {{ end }}
-      */}}
+        <h1 class="display-4">{{ .headline }}</h1>
+        {{ range .paragraphs }}
+          <p class="lead">{{ .content }}</p>
+        {{ end }}
+        <div class="lead">
+          {{/* .page_content | $.Page.RenderString */}}
+          {{ .page_content | markdownify }}
+        </div>
+        {{ if (isset . "items") }}
+          <ol class="text-start list-group list-group-numbered">
+          {{ range .items }}
+            <li class="list-group-item">{{ .content }}</li>
+          {{ end }}
+          </ol>
+        {{ end }}
+        <hr class="my-4">
+        <p>{{ .link_info }}</p>
+        {{ range .buttons }}
+        <a class="btn btn-primary btn-lg" href="{{ .href }}" role="button">{{ .label }}</a>
+        {{ end }}
+      </div>
     </div>
-  </div>
+    {{ if (isset . "image-right") }}
+    <div class="col d-flex justify-content-center">
+      {{ if (isset . "image_bg") }}
+        {{ $some_img := printf "%s/%s" "images" .image_bg }}
+        {{ $myimage := resources.Get $some_img }}
+        <div class="{{ .image_class }}" style="background: url('{{ $myimage.RelPermalink }}') no-repeat center center / 100% 100%;">
+      {{ else }}
+        <div class="{{ .image_class }}">
+      {{ end }}
+        {{ $some_img := printf "%s/%s" "images" .image }}
+        {{ $myimage := resources.Get $some_img }}
+        {{/*
+        {{ $myimage := .Resources.GetMatch $some_img }}
+        */}}
+        <img src="{{ $myimage.RelPermalink }}">
+        {{/*
+        {{ with $myimage }}
+          <img src="{{ .RelPermalink }}">
+        {{ end }}
+        */}}
+      </div>
+    </div>
+    {{ end }}
   {{ end }}
 </div>

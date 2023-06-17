@@ -1,10 +1,10 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://surfbuddy.net/'
 languageCode = 'en-us'
-title = 'SurfBuddy'
+title = 'SurfBuddy - 0.37.0'
 theme = "surfbuddy-theme"
 [menu]
   [[menu.main]]
-    URL = "/"
+    url = "/"
     name = "Home"
     identifier = "home"
     pre = "home"

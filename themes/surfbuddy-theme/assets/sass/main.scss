@@ -126,6 +126,11 @@ html {
 //   opacity: 0.5; /* Adjust the opacity value as needed */
 // }
 
+#scroll-spy-container {
+  overflow-y: scroll;
+  position: relative;
+}
+
 .background-image {
   // background: url(../images/wave-1920x1080.jpg) no-repeat center top;
   -webkit-background-size:cover;

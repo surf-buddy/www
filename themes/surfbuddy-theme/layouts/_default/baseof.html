@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   {{- partial "head.html" . -}}
-<body>
+<body data-bs-spy="scroll" data-bs-target="#sidebarSubMenu" data-bs-offset="0" tabindex="0">
 {{ $some_img := printf "%s/%s" "images" .Params.background }}
 {{ $myimage := resources.Get $some_img }}
 <div class="background-image" style="background: url('{{ $myimage.RelPermalink }}') no-repeat center top;">
@@ -13,7 +13,7 @@
 <div class="container-fluid">
   <div class="row">
     {{- partial "sidebar.html" . -}}
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main id="main-body" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       {{- block "main" . }}{{- end }}
     </main>
   </div>
