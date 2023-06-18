@@ -8,7 +8,7 @@ background = 'wave-1920x1080.jpg'
     id = 'surfbuddy'
     image = 'watchface.png'
     image-right = true
-    link_info = 'Support me and learn more about the watchface and how to use it.'
+    link_info = 'Support me and the watchface.'
     # page_content = 'home/surfbuddy.md'
     page_content = """
 The **Surfbuddy** watchface is a newly designed watchface for surfing information. It's design and displayed information is inspired by [my most favorite watchface](https://apps.garmin.com/en-US/apps/d819f156-de65-41c6-8c97-26b997546460) which was discontinued in August 2021.
@@ -23,6 +23,9 @@ Since then I worked from time to time on a new watchface that resembles it.
     [[content.pages.buttons]]
       label = 'Support me'
       href = 'https://www.buymeacoffee.com/JanSurft'
+    [[content.pages.buttons]]
+      label = 'Feedback'
+      href = 'https://surfbuddy.hellonext.co'
   [[content.pages]]
     headline = 'Support matters!'
     id = 'supportmatters'
@@ -59,7 +62,7 @@ What are all these services?
 - **surf-service:** The actual Surfbuddy API that is getting the requests from all the garmin watches all over the world.
 - **kube-dns / kubernetes:** Kubernetes related internal services.
 
-If all the users would share the costs to run this services we could get off with several cents a month, depending on how many users would participate in a monthly donation. This would make the whole work and fun with surfing continue.
+If all the users would share the costs to run these services we could get off with several cents a month, depending on how many users would participate in a monthly donation.
 
 **A Labor of Love:**
 
@@ -67,28 +70,37 @@ SurfBuddy was born from my passion for surfing and a desire to enhance the exper
 
 **Accessible and Free:**
 
-SurfBuddy is offered free of charge to the surfing community. It's my intention to make this invaluable tool accessible to all, regardless of financial limitations. Your support helps maintain this commitment, ensuring that SurfBuddy remains freely available for everyone.
+SurfBuddy is offered free of charge to the marine community. It's my intention to make this invaluable tool accessible to all, regardless of financial limitations. Your support helps maintain this commitment, ensuring that SurfBuddy remains freely available for everyone.
 
 **Long-Term Sustainability:**
 
-Every donation towards supporting SurfBuddy directly contributes to its long-term sustainability. It covers server and database expenses, ensuring the watch face remains functional, reliable, and up-to-date. Your support safeguards the future of SurfBuddy, benefiting both yourself and future surfers.
+Every donation towards supporting SurfBuddy directly contributes to its long-term sustainability. It covers server and database expenses, ensuring the watch face remains functional, reliable, and up-to-date. Your support safeguards the future of SurfBuddy, benefiting both yourself and others.
 """
     [[content.pages.buttons]]
       label = 'Support me'
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
+    headline = 'Feedback'
+    id = 'feedback'
+    image = 'surfbuddy-feedback.png'
+    image-right = true
+    link_info = 'Submit your ideas and encountered bugs'
+    page_content = """
+There is a dedicated [feedback page](surfbuddy.hellonext.co) allowing you to provide new ideas and submit bug reports for SurfBuddy. Depending on the votes that single bugs and features will get over time, I will try to plan and work on the most desired ones.
+"""
+    [[content.pages.buttons]]
+      label = 'Feedback'
+      href = 'surfbuddy.hellonext.co'
+
+  [[content.pages]]
     headline = 'How does it work?'
     id = 'how-does-it-work'
     image = 'surfbuddy-arch-narrow.png'
-    link_info = 'If you want to learn more about the functionality of the service'
     page_content = """
 The watchface gets the forecast information from the **SurfBuddy API** that caches and transforms forecast responses from external services. At the moment this is mostly [Surfline](https://www.surfline.com/) in combination with a [GeoDB Cities API](http://geodb-cities-api.wirefreethought.com/) location service.
 
 The SurfBuddy API is crucial, because responses from forecasting services do not adhere to the limited size requirements of the Garmin watchfaces.
 """
-    [[content.pages.buttons]]
-      label = 'Learn more'
-      href = '#'
   [[content.pages]]
     headline = 'Install SurfBuddy'
     id = 'install-surfbuddy'
