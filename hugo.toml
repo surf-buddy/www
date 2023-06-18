@@ -2,6 +2,7 @@ baseURL = 'https://surfbuddy.net/'
 languageCode = 'en-us'
 title = 'SurfBuddy - 0.37.0'
 theme = "surfbuddy-theme"
+googleAnalytics = 'G-QSJ75X464S'
 [menu]
   [[menu.main]]
     url = "/"
