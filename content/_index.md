@@ -56,9 +56,9 @@ For the SurfBuddy API to run reliably and accessible from all over the world I n
 
 What are all these services?
 
-- **cert-manager*:** Garmin watches require API access via HTTPS, so the API needs a HTTPS certificate which I get via [Let's Encrypt](https://letsencrypt.org/), for it not to run out every three months I have a certificate manager running.
+- **cert-manager\*:** Garmin watches require API access via HTTPS, so the API needs a HTTPS certificate which I get via [Let's Encrypt](https://letsencrypt.org/), for it not to run out every three months I have a certificate manager running.
 - **hermes-mongodb-svc:** For caching I need a database to temporarily store requested data, I have a mongodb replica set for fast and reliable queries.
-- **ingress-nginx-controller*:** The SurfBuddy API needs to be accessible from the internet via a domain name, the ingress-nginx-controller manages to forward API requests to the correct Kubernetes service.
+- **ingress-nginx-controller\*:** The SurfBuddy API needs to be accessible from the internet via a domain name, the ingress-nginx-controller manages to forward API requests to the correct Kubernetes service.
 - **surf-service:** The actual Surfbuddy API that is getting the requests from all the garmin watches all over the world.
 - **kube-dns / kubernetes:** Kubernetes related internal services.
 
