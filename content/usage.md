@@ -23,7 +23,7 @@ The *Spot name* setting sets the spot name to get surfing information for. After
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Latitude/ Longitude Hint'
-    id = 'latlonhint'
+    id = 'lat-lon-hint'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -42,7 +42,7 @@ The spot with the smallest distance to the hinted latitude and longitude will be
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Info Type'
-    id = 'infotype'
+    id = 'info-type'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -59,7 +59,7 @@ The *Info Type* allows to switch between displaying the sunrise and sunset time 
 
   [[content.pages]]
     headline = 'Plot Type'
-    id = 'plottype'
+    id = 'plot-type'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -75,7 +75,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Display seconds'
-    id = 'displayseconds'
+    id = 'display-seconds'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -91,7 +91,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Plot Style'
-    id = 'plotstyle'
+    id = 'plot-style'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -108,7 +108,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Unit for Wave Elevation'
-    id = 'unitforwaveelevation'
+    id = 'unit-for-wave-elevation'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -127,7 +127,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Unit for Wind Speed'
-    id = 'unitforwindspeed'
+    id = 'unit-for-wind-speed'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -144,7 +144,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Military Format for 24 Hour Time'
-    id = 'militaryformat'
+    id = 'military-format'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -161,7 +161,7 @@ The *Plot Type* allows to switch between displaying the daily tide chart, a wave
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Forecast Time'
-    id = 'forecasttime'
+    id = 'forecast-time'
     image = 'watchface.png'
     image-right = true
     page_content = """
@@ -180,7 +180,7 @@ When in a different time zone than the currently set surf spot, *Forecast Time* 
       href = 'https://www.buymeacoffee.com/JanSurft'
   [[content.pages]]
     headline = 'Color Settings'
-    id = 'colorsettings'
+    id = 'color-settings'
     image = 'watchface.png'
     image-right = true
     page_content = """

@@ -28,7 +28,7 @@ Since then I worked from time to time on a new watchface that resembles it.
       href = 'https://surfbuddy.hellonext.co'
   [[content.pages]]
     headline = 'Support matters!'
-    id = 'supportmatters'
+    id = 'support-matters'
     # image = 'watchface.png'
     # image-right = true
     centered = false
@@ -86,11 +86,11 @@ Every donation towards supporting SurfBuddy directly contributes to its long-ter
     image-right = true
     link_info = 'Submit your ideas and encountered bugs'
     page_content = """
-There is a dedicated [feedback page](surfbuddy.hellonext.co) allowing you to provide new ideas and submit bug reports for SurfBuddy. Depending on the votes that single bugs and features will get over time, I will try to plan and work on the most desired ones.
+There is a dedicated [feedback page](https://surfbuddy.hellonext.co) allowing you to provide new ideas and submit bug reports for SurfBuddy. Depending on the votes that single bugs and features will get over time, I will try to plan and work on the most desired ones.
 """
     [[content.pages.buttons]]
       label = 'Feedback'
-      href = 'surfbuddy.hellonext.co'
+      href = 'https://surfbuddy.hellonext.co'
 
   [[content.pages]]
     headline = 'How does it work?'
